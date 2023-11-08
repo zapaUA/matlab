@@ -1,0 +1,4 @@
+LIBRARY QPSK_Receiver_2019b_cgxe.mexw64
+EXPORTS
+mexFunction
+mexfilerequiredapiversion

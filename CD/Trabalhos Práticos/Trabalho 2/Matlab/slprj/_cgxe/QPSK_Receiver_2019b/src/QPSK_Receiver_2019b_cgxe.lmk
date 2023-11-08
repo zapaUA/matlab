@@ -1,0 +1,50 @@
+CC     = "C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -w -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -nodeclspec  
+LDFLAGS = -s -dll -L"C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map 
+LIBFLAGS = 
+
+OBJECTS = \
+	"c_mexapi_version.obj"\
+	"lccstub.obj"\
+	"QPSK_Receiver_2019b_cgxe.obj"\
+	"m_XcrQgI9XIybRllmc64ibLB.obj"\
+	"m_EHc0CysqDrtqIH6UM7ThuF.obj"\
+	"m_J64VNGO9ebiKjY9vCcBSo.obj"\
+	"QPSK_Receiver_2019b_cgxe_registry.obj"\
+	"QPSK_Receiver_2019b_cgxe.def"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmx.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmex.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmat.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libfixedpoint.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libut.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmwmathutil.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libemlrt.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmwcgxert.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmwcgxeooprt.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmwslexec_simbridge.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmwslccrt.lib"\
+	"C:\Program Files\MATLAB\R2021b\lib\win64\libmwipp.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libcovrt.lib"\
+	"C:\Program Files\MATLAB\R2021b\extern\lib\win64\microsoft\libmwsl_sfcn_cov_bridge.lib"\
+
+INCLUDE_PATH= -I"C:\Program Files\MATLAB\R2021b\extern\include"  -I"C:\Program Files\MATLAB\R2021b\simulink\include"  -I"C:\Program Files\MATLAB\R2021b\rtw\c\src"  -I"C:\Users\Admin\onedrive - universidade de aveiro\universidade eet\4º ano\1º semestre\CD\Prática\trabalhos práticos\trabalho 2\slprj\_cgxe\qpsk_receiver_2019b\src"  -I"C:\Users\Admin\onedrive - universidade de aveiro\universidade eet\4º ano\1º semestre\CD\Prática\trabalhos práticos\trabalho 2"  -I"C:\Users\Admin\OneDrive - Universidade de Aveiro\Universidade EET\4º ano\1º Semestre\CD\Prática\Trabalhos Práticos\Trabalho 2\slprj\_cprj"  -I"C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\include64"  -I"C:\Users\Admin\OneDrive - Universidade de Aveiro\Universidade EET\4º ano\1º Semestre\CD\Prática\Trabalhos Práticos\Trabalho 2\slprj\_cgxe\QPSK_Receiver_2019b\src"  -I"C:\Users\Admin\OneDrive - Universidade de Aveiro\Universidade EET\4º ano\1º Semestre\CD\Prática\Trabalhos Práticos\Trabalho 2" 
+ 
+
+QPSK_Receiver_2019b_cgxe.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o QPSK_Receiver_2019b_cgxe.mexw64 @QPSK_Receiver_2019b_cgxe.lmko
+c_mexapi_version.obj :	"C:\Program Files\MATLAB\R2021b\extern\version\c_mexapi_version.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files\MATLAB\R2021b\extern\version\c_mexapi_version.c"
+lccstub.obj :	"C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files\MATLAB\R2021b\sys\lcc64\lcc64\mex\lccstub.c"
+QPSK_Receiver_2019b_cgxe.obj :	"QPSK_Receiver_2019b_cgxe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "QPSK_Receiver_2019b_cgxe.c"
+m_XcrQgI9XIybRllmc64ibLB.obj :	"m_XcrQgI9XIybRllmc64ibLB.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "m_XcrQgI9XIybRllmc64ibLB.c"
+m_EHc0CysqDrtqIH6UM7ThuF.obj :	"m_EHc0CysqDrtqIH6UM7ThuF.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "m_EHc0CysqDrtqIH6UM7ThuF.c"
+m_J64VNGO9ebiKjY9vCcBSo.obj :	"m_J64VNGO9ebiKjY9vCcBSo.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "m_J64VNGO9ebiKjY9vCcBSo.c"
+QPSK_Receiver_2019b_cgxe_registry.obj :	"QPSK_Receiver_2019b_cgxe_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "QPSK_Receiver_2019b_cgxe_registry.c"
